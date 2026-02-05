@@ -12,7 +12,7 @@ import { ThemeService } from '../../services/theme.service';
       <nav class="container mx-auto px-4 py-4">
         <div class="flex items-center justify-between">
           <!-- Logo -->
-          <a routerLink="/" class="flex items-center space-x-2 group">
+          <a routerLink="/" class="flex mr-5 items-center space-x-2 group">
             <div class="w-12 h-12 bg-gradient-to-br from-primary-600 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-glow group-hover:scale-110 transition-all duration-300">
               <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
@@ -28,7 +28,7 @@ import { ThemeService } from '../../services/theme.service';
               [routerLink]="link.path" 
               routerLinkActive="nav-link-active"
               [routerLinkActiveOptions]="{exact: true}"
-              class="nav-link px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 font-medium relative"
+              class="nav-link px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 font-medium relative whitespace-nowrap"
             >
               {{ link.label }}
             </a>
