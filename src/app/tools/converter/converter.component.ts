@@ -15,7 +15,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
 
@@ -186,7 +186,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Bottom -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4">
-          <app-ad-placeholder size="rectangle"></app-ad-placeholder>
+          <app-ad-placeholder size="rectangle" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
     </div>
@@ -219,10 +219,10 @@ export class ConverterComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.updateMetaTags({
-      title: 'Color Converter - Convert HEX, RGB, HSL, CMYK | Color Tools',
+      title: 'Color Converter - Convert HEX, RGB, HSL, CMYK | Color Utils',
       description: 'Convert colors between different formats with ease. Supports HEX, RGB, HSL, and CMYK color formats.',
       keywords: 'color converter, hex to rgb, rgb to hsl, color format converter, cmyk converter',
-      author: 'Color Tools',
+      author: 'Color Utils',
       ogUrl: 'https://colorutils.com/converter',
       canonical: 'https://colorutils.com/converter'
     });

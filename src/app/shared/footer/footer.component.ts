@@ -12,9 +12,9 @@ import { CommonModule } from '@angular/common';
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- About Section -->
           <div>
-            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Color Tools</h3>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Color Utils</h3>
             <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-              Professional color tools for designers and developers. Pick, convert, and analyze colors with ease.
+              Professional color utils for designers and developers. Pick, convert, and analyze colors with ease.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ import { CommonModule } from '@angular/common';
         <!-- Copyright -->
         <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800">
           <p class="text-center text-gray-600 dark:text-gray-400 text-sm">
-            © {{ currentYear }} Color Tools. All rights reserved. Built with Angular & Tailwind CSS.
+            © {{ currentYear }} Color Utils. All rights reserved. Built with Angular & Tailwind CSS.
           </p>
         </div>
       </div>
@@ -73,7 +73,8 @@ export class FooterComponent {
     { label: 'Image Color Picker', url: '/image-picker' },
     { label: 'Screen Color Picker', url: '/screen-picker' },
     { label: 'Color Converter', url: '/converter' },
-    { label: 'Contrast Checker', url: '/contrast-checker' }
+    { label: 'Contrast Checker', url: '/contrast-checker' },
+    { label: 'Theme Preview', url: '/theme-preview' }
   ];
 
   resources = [

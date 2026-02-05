@@ -39,7 +39,7 @@
 
   /* Gradient text */
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-700;
   }
 
   /* Hover lift effect */

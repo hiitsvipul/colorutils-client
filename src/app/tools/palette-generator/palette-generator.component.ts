@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, signal, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { PaletteService, PaletteColor, PaletteSize, PaletteAlgorithm } from '../../services/palette.service';
 import { ToastService } from '../../services/toast.service';
 import { SeoService } from '../../services/seo.service';
@@ -15,7 +16,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
 
@@ -256,6 +257,18 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
                     <span>Copy as Tailwind</span>
                   </button>
                 </div>
+
+                <!-- Theme Preview Button -->
+                <button
+                  (click)="viewThemePreview()"
+                  class="w-full mt-4 px-4 py-3 bg-gradient-to-r from-primary-600 to-blue-600 hover:from-primary-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all hover:scale-[1.02] flex items-center justify-center space-x-2 shadow-lg"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                  <span>View Theme Preview</span>
+                </button>
               </section>
             }
           </div>
@@ -264,7 +277,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
           <div class="lg:col-span-1 space-y-6">
             <!-- Ad Placeholder Sidebar -->
             <div class="hidden lg:block">
-              <app-ad-placeholder size="square"></app-ad-placeholder>
+              <app-ad-placeholder size="square" [enableAds]="true"></app-ad-placeholder>
             </div>
 
             <!-- Tips Card -->
@@ -336,6 +349,7 @@ export class PaletteGeneratorComponent implements OnInit {
   private paletteService = inject(PaletteService);
   private toastService = inject(ToastService);
   private seoService = inject(SeoService);
+  private router = inject(Router);
 
   selectedMethod = signal<'base' | 'random' | 'image'>('base');
   baseColor = '#0EA5E9';
@@ -354,10 +368,10 @@ export class PaletteGeneratorComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.updateMetaTags({
-      title: 'Color Palette Generator - Create Beautiful Color Schemes | Color Tools',
+      title: 'Color Palette Generator - Create Beautiful Color Schemes | Color Utils',
       description: 'Generate stunning color palettes using color theory algorithms. Create harmonious color schemes from base colors or extract palettes from images.',
       keywords: 'color palette generator, color scheme, color harmony, analogous colors, complementary colors, color theory',
-      author: 'Color Tools',
+      author: 'Color Utils',
       ogUrl: 'https://colorutils.com/palette-generator',
       canonical: 'https://colorutils.com/palette-generator'
     });
@@ -480,5 +494,24 @@ export class PaletteGeneratorComponent implements OnInit {
     } catch (error) {
       this.toastService.error('Failed to copy Tailwind config');
     }
+  }
+
+  viewThemePreview(): void {
+    const colors = this.palette();
+    const queryParams: any = {};
+
+    // Map palette colors to theme colors
+    if (colors.length >= 1) queryParams.primary = colors[0].hex.replace('#', '');
+    if (colors.length >= 2) queryParams.secondary = colors[1].hex.replace('#', '');
+    if (colors.length >= 3) queryParams.accent = colors[2].hex.replace('#', '');
+    if (colors.length >= 4) queryParams.surface = colors[3].hex.replace('#', '');
+    if (colors.length >= 5) queryParams.text = colors[4].hex.replace('#', '');
+
+    // Set default background and textSecondary
+    queryParams.background = 'f8fafc';
+    queryParams.textSecondary = '64748b';
+
+    this.router.navigate(['/theme-preview'], { queryParams });
+    this.toastService.success('Opening theme preview with your colors!');
   }
 }

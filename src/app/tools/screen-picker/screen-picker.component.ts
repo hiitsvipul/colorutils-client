@@ -14,7 +14,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
 
@@ -23,7 +23,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
         <article class="mb-8">
           <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-3">Screen Color Picker</h1>
           <p class="text-lg text-gray-600 dark:text-gray-400">
-            Pick any color from your screen using the EyeDropper API. Click the button below to activate the color picker.
+            Pick any color from anywhere on your screen - even outside the browser! Simply resize your browser window to see other applications, then use the EyeDropper API to select colors from any application, image, or window.
           </p>
         </article>
 
@@ -163,7 +163,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Bottom -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4">
-          <app-ad-placeholder size="rectangle"></app-ad-placeholder>
+          <app-ad-placeholder size="rectangle" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
     </div>
@@ -185,13 +185,48 @@ export class ScreenPickerComponent implements OnInit {
 
     // Set SEO meta tags
     this.seoService.updateMetaTags({
-      title: 'Screen Color Picker - Pick Colors from Anywhere | Color Tools',
+      title: 'Screen Color Picker - Pick Colors from Anywhere | Color Utils',
       description: 'Pick colors from anywhere on your screen using the EyeDropper API. Get color values in HEX, RGB, HSL, and CMYK formats instantly.',
       keywords: 'color picker, eyedropper, screen color picker, color tool, hex color, rgb color, hsl color',
-      author: 'Color Tools',
+      author: 'Color Utils',
       ogUrl: 'https://colorutils.com/screen-picker',
       canonical: 'https://colorutils.com/screen-picker'
     });
+
+    // Add HowTo structured data
+    this.addStructuredData();
+  }
+
+  private addStructuredData(): void {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      'name': 'How to Pick Colors from Your Screen',
+      'description': 'Learn how to use the screen color picker to extract colors from anywhere on your display.',
+      'step': [
+        {
+          '@type': 'HowToStep',
+          'name': 'Open the Color Picker',
+          'text': 'Click the "Pick Color from Screen" button to activate the eyedropper tool.',
+          'position': 1
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'Select a Color',
+          'text': 'Move your cursor over any part of your screen and click to select that color.',
+          'position': 2
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'Copy Color Value',
+          'text': 'Click on any color format (HEX, RGB, HSL, CMYK) to copy it to your clipboard.',
+          'position': 3
+        }
+      ]
+    });
+    document.head.appendChild(script);
   }
 
   async pickColor(): Promise<void> {

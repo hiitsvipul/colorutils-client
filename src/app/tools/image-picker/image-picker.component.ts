@@ -14,7 +14,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
 
@@ -183,7 +183,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Bottom -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4">
-          <app-ad-placeholder size="rectangle"></app-ad-placeholder>
+          <app-ad-placeholder size="rectangle" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
     </div>
@@ -207,10 +207,10 @@ export class ImagePickerComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.updateMetaTags({
-      title: 'Image Color Picker - Pick Colors from Images | Color Tools',
+      title: 'Image Color Picker - Pick Colors from Images | Color Utils',
       description: 'Upload an image and pick colors from it with precision. Get color values in HEX, RGB, HSL, and CMYK formats.',
       keywords: 'image color picker, color from image, eyedropper tool, color extractor, image color tool',
-      author: 'Color Tools',
+      author: 'Color Utils',
       ogUrl: 'https://colorutils.com/image-picker',
       canonical: 'https://colorutils.com/image-picker'
     });

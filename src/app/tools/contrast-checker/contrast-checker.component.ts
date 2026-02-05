@@ -21,7 +21,7 @@ interface ContrastResult {
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
 
@@ -278,7 +278,7 @@ interface ContrastResult {
       <!-- Ad Placeholder Bottom -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4">
-          <app-ad-placeholder size="rectangle"></app-ad-placeholder>
+          <app-ad-placeholder size="rectangle" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
     </div>
@@ -296,10 +296,10 @@ export class ContrastCheckerComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.updateMetaTags({
-      title: 'Contrast Checker - WCAG Accessibility Compliance | Color Tools',
+      title: 'Contrast Checker - WCAG Accessibility Compliance | Color Utils',
       description: 'Check color contrast ratios for WCAG AA and AAA compliance. Ensure your website meets accessibility standards.',
       keywords: 'contrast checker, wcag contrast, accessibility, color contrast, aa compliance, aaa compliance',
-      author: 'Color Tools',
+      author: 'Color Utils',
       ogUrl: 'https://colorutils.com/contrast-checker',
       canonical: 'https://colorutils.com/contrast-checker'
     });

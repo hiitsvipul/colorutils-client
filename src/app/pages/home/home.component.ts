@@ -11,7 +11,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
   template: `
     <div class="min-h-screen">
       <!-- Hero Section -->
-      <section class="relative bg-gradient-to-br from-primary-600 via-purple-600 to-pink-600 text-white py-24 overflow-hidden">
+      <section class="relative bg-gradient-to-br from-primary-600 to-blue-600 text-white py-24 overflow-hidden">
         <!-- Animated background elements -->
         <div class="absolute inset-0 opacity-20">
           <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse-slow"></div>
@@ -54,7 +54,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder -->
       <div class="bg-white dark:bg-slate-900">
         <div class="container mx-auto px-4 py-6">
-          <app-ad-placeholder size="banner"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
 
@@ -63,7 +63,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
         <div class="container mx-auto px-4">
           <div class="text-center mb-16 animate-fade-in">
             <h2 class="text-4xl md:text-5xl font-bold mb-4">
-              <span class="gradient-text">Powerful Color Tools</span>
+              <span class="gradient-text">Powerful Color Utils</span>
             </h2>
             <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Our suite of tools helps designers and developers work with colors more efficiently.
@@ -77,7 +77,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
                 class="group bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:-translate-y-2 animate-slide-up border border-gray-200 dark:border-slate-700"
                 [style.animation-delay]="($index * 0.1) + 's'"
               >
-                <div class="w-16 h-16 bg-gradient-to-br from-primary-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                <div class="w-16 h-16 bg-gradient-to-br from-primary-600 to-blue-600 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                   <svg class="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="tool.icon"></path>
                   </svg>
@@ -149,7 +149,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
           <div class="bg-gradient-to-br from-primary-600 to-blue-600 rounded-2xl shadow-2xl p-12 text-center text-white">
             <h2 class="text-4xl font-bold mb-4">Ready to Start?</h2>
             <p class="text-xl mb-8 text-primary-100">
-              Try our color tools now and enhance your workflow
+              Try our color utils now and enhance your workflow
             </p>
             <a 
               routerLink="/screen-picker"
@@ -164,7 +164,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Bottom -->
       <div class="bg-white dark:bg-slate-900">
         <div class="container mx-auto px-4 pb-8">
-          <app-ad-placeholder size="rectangle"></app-ad-placeholder>
+          <app-ad-placeholder size="rectangle" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
     </div>
@@ -210,17 +210,78 @@ export class HomeComponent implements OnInit {
       description: 'Create stunning CSS gradients with live preview and export options',
       route: '/gradient-generator',
       icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z'
+    },
+    {
+      name: 'Theme Preview',
+      description: 'Visualize website themes with custom colors on real UI components',
+      route: '/theme-preview',
+      icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
     }
   ];
 
   ngOnInit(): void {
     this.seoService.updateMetaTags({
-      title: 'Color Tools - Professional Color Picker, Converter & Accessibility Checker',
-      description: 'Free online color tools for designers and developers. Pick colors from screen or images, convert between formats, and check WCAG contrast ratios.',
-      keywords: 'color tools, color picker, hex converter, rgb converter, hsl converter, contrast checker, wcag, accessibility, eyedropper',
-      author: 'Color Tools',
+      title: 'Color Utils - Professional Color Picker, Converter & Accessibility Checker',
+      description: 'Free online color utils for designers and developers. Pick colors from screen or images, convert between formats, and check WCAG contrast ratios.',
+      keywords: 'color utils, color picker, hex converter, rgb converter, hsl converter, contrast checker, wcag, accessibility, eyedropper',
+      author: 'Color Utils',
       ogUrl: 'https://colorutils.com/',
       canonical: 'https://colorutils.com/'
     });
+
+    // Add FAQ structured data
+    this.addStructuredData();
+  }
+
+  private addStructuredData(): void {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What is Color Utils?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Color Utils is a comprehensive suite of free online tools for designers and developers to work with colors. It includes a screen color picker, image color picker, color converter, contrast checker, palette generator, gradient generator, and theme preview tool.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How do I pick colors from my screen?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Use our Screen Color Picker tool. Click the "Pick Color from Screen" button, then click anywhere on your screen to capture that color. The tool will provide the color in HEX, RGB, HSL, and CMYK formats.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is Color Utils free to use?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes! Color Utils is completely free to use. All tools are available without registration or subscription.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is WCAG contrast checking?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'WCAG (Web Content Accessibility Guidelines) contrast checking ensures your color combinations are readable for all users, including those with visual impairments. Our Contrast Checker tool verifies AA and AAA compliance levels.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I generate color palettes?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes! Our Palette Generator creates harmonious color schemes using color theory algorithms like analogous, complementary, triadic, and monochromatic. You can also extract palettes from images.'
+          }
+        }
+      ]
+    });
+    document.head.appendChild(script);
   }
 }

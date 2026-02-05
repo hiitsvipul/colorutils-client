@@ -13,12 +13,12 @@ import { ThemeService } from '../../services/theme.service';
         <div class="flex items-center justify-between">
           <!-- Logo -->
           <a routerLink="/" class="flex items-center space-x-2 group">
-            <div class="w-12 h-12 bg-gradient-to-br from-primary-500 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-glow group-hover:scale-110 transition-all duration-300">
+            <div class="w-12 h-12 bg-gradient-to-br from-primary-600 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-glow group-hover:scale-110 transition-all duration-300">
               <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
               </svg>
             </div>
-            <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-purple-600">Color Tools</span>
+            <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-700">Color Utils</span>
           </a>
 
           <!-- Desktop Navigation -->
@@ -130,7 +130,8 @@ export class HeaderComponent {
     { label: 'Converter', path: '/converter' },
     { label: 'Contrast Checker', path: '/contrast-checker' },
     { label: 'Palette Generator', path: '/palette-generator' },
-    { label: 'Gradient Generator', path: '/gradient-generator' }
+    { label: 'Gradient Generator', path: '/gradient-generator' },
+    { label: 'Theme Preview', path: '/theme-preview' }
   ];
 
   toggleTheme(): void {

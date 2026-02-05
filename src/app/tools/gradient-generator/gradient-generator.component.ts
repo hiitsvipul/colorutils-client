@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { GradientService, GradientConfig, GradientType, ColorStop } from '../../services/gradient.service';
 import { ToastService } from '../../services/toast.service';
 import { SeoService } from '../../services/seo.service';
@@ -15,7 +16,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
         </div>
       </div>
 
@@ -234,6 +235,18 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
                 </button>
               </div>
               <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm font-mono">background: {{ gradientCSS() }};</pre>
+              
+              <!-- Theme Preview Button -->
+              <button
+                (click)="viewThemePreview()"
+                class="w-full mt-4 px-4 py-3 bg-gradient-to-r from-primary-600 to-blue-600 hover:from-primary-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all hover:scale-[1.02] flex items-center justify-center space-x-2 shadow-lg"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+                <span>View Theme Preview</span>
+              </button>
             </section>
           </div>
 
@@ -241,7 +254,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
           <div class="lg:col-span-1 space-y-6">
             <!-- Ad Placeholder Sidebar -->
             <div class="hidden lg:block">
-              <app-ad-placeholder size="square"></app-ad-placeholder>
+              <app-ad-placeholder size="square" [enableAds]="true"></app-ad-placeholder>
             </div>
 
             <!-- Gradient Presets -->
@@ -305,6 +318,7 @@ export class GradientGeneratorComponent implements OnInit {
   private gradientService = inject(GradientService);
   private toastService = inject(ToastService);
   private seoService = inject(SeoService);
+  private router = inject(Router);
 
   gradient = signal<GradientConfig>(this.gradientService.createDefaultGradient());
   gradientCSS = signal<string>('');
@@ -320,10 +334,10 @@ export class GradientGeneratorComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.updateMetaTags({
-      title: 'CSS Gradient Generator - Create Beautiful Gradients | Color Tools',
+      title: 'CSS Gradient Generator - Create Beautiful Gradients | Color Utils',
       description: 'Generate stunning CSS gradients with real-time preview. Create linear, radial, and conic gradients with an intuitive visual editor.',
       keywords: 'css gradient generator, linear gradient, radial gradient, conic gradient, gradient maker, css background',
-      author: 'Color Tools',
+      author: 'Color Utils',
       ogUrl: 'https://colorutils.com/gradient-generator',
       canonical: 'https://colorutils.com/gradient-generator'
     });
@@ -454,5 +468,24 @@ export class GradientGeneratorComponent implements OnInit {
 
     this.updateStopPosition(this.draggedStopId, Math.round(percentage));
     this.draggedStopId = null;
+  }
+
+  viewThemePreview(): void {
+    const stops = this.gradient().stops;
+    const queryParams: any = {};
+
+    // Map gradient stops to theme colors
+    if (stops.length >= 1) queryParams.primary = stops[0].color.replace('#', '');
+    if (stops.length >= 2) queryParams.secondary = stops[1].color.replace('#', '');
+    if (stops.length >= 3) queryParams.accent = stops[2].color.replace('#', '');
+    if (stops.length >= 4) queryParams.surface = stops[3].color.replace('#', '');
+    if (stops.length >= 5) queryParams.text = stops[4].color.replace('#', '');
+
+    // Set default background and textSecondary
+    queryParams.background = 'f8fafc';
+    queryParams.textSecondary = '64748b';
+
+    this.router.navigate(['/theme-preview'], { queryParams });
+    this.toastService.success('Opening theme preview with your gradient colors!');
   }
 }
