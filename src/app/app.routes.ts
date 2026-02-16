@@ -42,6 +42,51 @@ export const routes: Routes = [
     title: 'Theme Preview | Color Utils'
   },
   {
+    path: 'color-theory',
+    loadComponent: () => import('./pages/color-theory/color-theory.component').then(m => m.ColorTheoryComponent),
+    title: 'Color Theory Guide | Color Utils'
+  },
+  {
+    path: 'faq',
+    loadComponent: () => import('./pages/faq/faq.component').then(m => m.FAQComponent),
+    title: 'FAQ | Color Utils'
+  },
+  {
+    path: 'use-cases',
+    loadComponent: () => import('./pages/use-cases/use-cases.component').then(m => m.UseCasesComponent),
+    title: 'Use Cases | Color Utils'
+  },
+  {
+    path: 'privacy',
+    loadComponent: () => import('./pages/privacy/privacy.component').then(m => m.PrivacyComponent),
+    title: 'Privacy Policy | Color Utils'
+  },
+  {
+    path: 'terms',
+    loadComponent: () => import('./pages/terms/terms.component').then(m => m.TermsComponent),
+    title: 'Terms & Conditions | Color Utils'
+  },
+  {
+    path: 'about',
+    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent),
+    title: 'About Us | Color Utils'
+  },
+  {
+    path: 'contact',
+    loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent),
+    title: 'Contact Us | Color Utils'
+  },
+  {
+    path: 'cookie-policy',
+    loadComponent: () => import('./pages/cookie-policy/cookie-policy.component').then(m => m.CookiePolicyComponent),
+    title: 'Cookie Policy | Color Utils'
+  },
+  {
+    path: 'sitemap',
+    loadComponent: () => import('./pages/sitemap/sitemap.component').then(m => m.SitemapComponent),
+    title: 'Sitemap | Color Utils'
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full'

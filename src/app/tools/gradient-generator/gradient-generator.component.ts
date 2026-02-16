@@ -16,17 +16,62 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="false"></app-ad-placeholder>
         </div>
       </div>
 
       <div class="container mx-auto px-4">
         <!-- Header Section -->
-        <article class="mb-8">
+        <article class="mb-12">
           <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-3">Gradient Generator</h1>
-          <p class="text-lg text-gray-600 dark:text-gray-400">
-            Create stunning CSS gradients with real-time preview. Perfect for modern web design.
+          <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+            Create stunning CSS gradients with real-time preview. Perfect for modern web design, backgrounds, and visual effects.
           </p>
+          
+          <!-- Why Use Section -->
+          <section class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 mb-6 border border-blue-200 dark:border-blue-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Why Use a Gradient Generator?</h2>
+            <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Visual Appeal:</strong> Gradients add depth, sophistication, and modern aesthetic to any web design or application.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Performance Optimized:</strong> CSS gradients are lightweight - render instantly without images, reducing page load times.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Easy Customization:</strong> Adjust angles, colors, and stops in real-time to get exactly the look you want.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Multiple Types:</strong> Create linear, radial, and conic gradients for different effects and purposes.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Copy-Ready CSS:</strong> Get production-ready CSS code that works across all modern browsers.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>No Coding Required:</strong> Visual interface makes gradient creation accessible to designers and developers alike.</span></li>
+            </ul>
+          </section>
+
+          <!-- Gradient Types Section -->
+          <section class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 mb-6 border border-purple-200 dark:border-purple-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Gradient Types</h2>
+            <div class="space-y-4 text-gray-700 dark:text-gray-300">
+              <div>
+                <h3 class="font-bold text-lg mb-2">Linear Gradient</h3>
+                <p>Colors transition in a straight line. Specify direction (top, bottom, left, right, or custom angle). Best for: backgrounds, overlays, directional effects.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Radial Gradient</h3>
+                <p>Colors transition from center outward in a circular or elliptical pattern. Best for: spotlights, vignettes, focal point effects.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Conic Gradient</h3>
+                <p>Colors transition around a central point, like a pie chart. Best for: color wheels, loading spinners, circular effects.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- How It Works Section -->
+          <section class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">How to Use the Gradient Generator</h2>
+            <ol class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">1.</span> <span>Select the gradient type (Linear, Radial, or Conic).</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">2.</span> <span>Choose your starting color and ending color(s).</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">3.</span> <span>Adjust the angle (for linear) or position (for radial) to customize the direction.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">4.</span> <span>Add color stops at specific positions for more complex gradients.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">5.</span> <span>See the live preview update in real-time as you make changes.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">6.</span> <span>Copy the CSS code directly into your stylesheets or HTML.</span></li>
+            </ol>
+          </section>
         </article>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -254,7 +299,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
           <div class="lg:col-span-1 space-y-6">
             <!-- Ad Placeholder Sidebar -->
             <div class="hidden lg:block">
-              <app-ad-placeholder size="square" [enableAds]="true"></app-ad-placeholder>
+              <app-ad-placeholder size="square" [enableAds]="false"></app-ad-placeholder>
             </div>
 
             <!-- Gradient Presets -->

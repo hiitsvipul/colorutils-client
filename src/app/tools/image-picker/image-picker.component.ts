@@ -14,17 +14,43 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="false"></app-ad-placeholder>
         </div>
       </div>
 
       <div class="container mx-auto px-4">
         <!-- Header Section -->
-        <article class="mb-8">
+        <article class="mb-12">
           <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-3">Image Color Picker</h1>
-          <p class="text-lg text-gray-600 dark:text-gray-400">
-            Upload an image and click anywhere on it to pick a color. Get precise color values from any image.
+          <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+            Upload an image and click anywhere on it to pick a color. Get precise color values from any image with zooming and magnifier features for pixel-perfect accuracy.
           </p>
+          
+          <!-- Why Use Section -->
+          <section class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 mb-6 border border-blue-200 dark:border-blue-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Why Use the Image Color Picker?</h2>
+            <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Extract Colors from Images:</strong> Quickly identify and extract exact color values from any uploaded image, photo, or design mockup.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Zoom & Magnifier Features:</strong> Use the built-in magnifier and zoom capabilities to pick colors with pixel-perfect precision, even from complex images.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Multi-Format Export:</strong> Get color values in HEX, RGB, HSL, and CMYK formats instantly - compatible with all design and development tools.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Perfect for Designers:</strong> Extract color palettes from inspiration images, competitor designs, brand guidelines, and mockups.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>No Limits:</strong> Process as many images as you want - no file size limits or upload restrictions.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Privacy Protected:</strong> All image processing happens in your browser - your images are never sent to our servers.</span></li>
+            </ul>
+          </section>
+
+          <!-- How It Works Section -->
+          <section class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">How to Use the Image Color Picker</h2>
+            <ol class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">1.</span> <span>Click "Select Image" or drag an image file into the upload area.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">2.</span> <span>Your image will load with interactive color picking enabled.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">3.</span> <span>Use the zoom slider to get a closer look at specific areas or enable the magnifier for detailed color selection.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">4.</span> <span>Click on any color in the image to instantly capture it in multiple formats.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">5.</span> <span>Copy the color value in your preferred format (HEX, RGB, HSL, CMYK) and use it in your design work.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">6.</span> <span>Upload a new image anytime to extract more colors or start fresh.</span></li>
+            </ol>
+          </section>
         </article>
 
         <!-- Main Tool Card -->
@@ -183,7 +209,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Bottom -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4">
-          <app-ad-placeholder size="rectangle" [enableAds]="true"></app-ad-placeholder>
+          <app-ad-placeholder size="rectangle" [enableAds]="false"></app-ad-placeholder>
         </div>
       </div>
     </div>

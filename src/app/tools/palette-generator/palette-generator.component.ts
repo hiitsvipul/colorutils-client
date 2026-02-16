@@ -16,17 +16,66 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="false"></app-ad-placeholder>
         </div>
       </div>
 
       <div class="container mx-auto px-4">
         <!-- Header Section -->
-        <article class="mb-8">
+        <article class="mb-12">
           <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-3">Color Palette Generator</h1>
-          <p class="text-lg text-gray-600 dark:text-gray-400">
-            Generate beautiful color palettes using color theory algorithms or extract colors from images.
+          <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+            Generate beautiful color palettes using color theory algorithms or extract colors from images. Create harmonious color schemes in seconds.
           </p>
+          
+          <!-- Why Use Section -->
+          <section class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 mb-6 border border-blue-200 dark:border-blue-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Why Use a Palette Generator?</h2>
+            <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Professional Results:</strong> Based on color theory - no guessing or trial-and-error needed to create harmonious palettes.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Save Hours of Work:</strong> Generate complete palettes in seconds instead of spending hours manually selecting colors.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Multiple Harmony Schemes:</strong> Choose from complementary, analogous, triadic, and monochromatic schemes for different moods.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Brand Consistency:</strong> Start with your brand color and generate a complete palette that works together perfectly.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Accessibility Built-In:</strong> Generated palettes work well together and consider contrast for readability.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Export Ready:</strong> Instantly export in CSS, JSON, or other formats for your design tools or code.</span></li>
+            </ul>
+          </section>
+
+          <!-- Color Harmony Schemes Section -->
+          <section class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 mb-6 border border-purple-200 dark:border-purple-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Color Harmony Schemes Explained</h2>
+            <div class="space-y-4 text-gray-700 dark:text-gray-300">
+              <div>
+                <h3 class="font-bold text-lg mb-2">Complementary</h3>
+                <p>Colors opposite on the color wheel (180°). Creates high contrast and vibrant energy. Best for: eye-catching designs, CTAs, highlights.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Analogous</h3>
+                <p>Colors next to each other on the color wheel (30° apart). Creates harmony and cohesion. Best for: calm, professional, natural designs.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Triadic</h3>
+                <p>Three colors equally spaced on the color wheel (120° apart). Balanced and vibrant. Best for: playful, creative, modern brands.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Monochromatic</h3>
+                <p>Different shades and tints of one color. Creates sophistication and unity. Best for: elegant, minimalist, professional designs.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- How It Works Section -->
+          <section class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">How to Use the Palette Generator</h2>
+            <ol class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">1.</span> <span>Enter a base color (your brand color or favorite color) in any format (HEX, RGB, HSL).</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">2.</span> <span>Select a harmony scheme type (Complementary, Analogous, Triadic, or Monochromatic).</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">3.</span> <span>The tool instantly generates a complete color palette based on the selected harmony.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">4.</span> <span>Preview each color in the palette and see how they work together.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">5.</span> <span>Copy individual colors or export the entire palette in your preferred format.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">6.</span> <span>Use the palette in your design tool or code - ready to go!</span></li>
+            </ol>
+          </section>
         </article>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -277,7 +326,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
           <div class="lg:col-span-1 space-y-6">
             <!-- Ad Placeholder Sidebar -->
             <div class="hidden lg:block">
-              <app-ad-placeholder size="square" [enableAds]="true"></app-ad-placeholder>
+              <app-ad-placeholder size="square" [enableAds]="false"></app-ad-placeholder>
             </div>
 
             <!-- Tips Card -->

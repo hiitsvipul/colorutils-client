@@ -32,6 +32,41 @@ import { ThemeService } from '../../services/theme.service';
             >
               {{ link.label }}
             </a>
+
+            <!-- Tools Dropdown -->
+            <div class="relative group">
+              <button class="nav-link px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 font-medium flex items-center gap-1">
+                Tools
+                <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </button>
+              
+              <!-- Dropdown Menu -->
+              <div class="absolute left-0 mt-0 w-48 bg-white dark:bg-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 border border-gray-200 dark:border-slate-700 z-50">
+                <a routerLink="/image-picker" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors">
+                  📷 Image Picker
+                </a>
+                <a routerLink="/screen-picker" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors">
+                  🎨 Screen Picker
+                </a>
+                <a routerLink="/converter" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors">
+                  🔄 Color Converter
+                </a>
+                <a routerLink="/contrast-checker" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors">
+                  ♿ Contrast Checker
+                </a>
+                <a routerLink="/palette-generator" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors">
+                  🎨 Palette Generator
+                </a>
+                <a routerLink="/gradient-generator" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors">
+                  🌈 Gradient Generator
+                </a>
+                <a routerLink="/theme-preview" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors">
+                  🎭 Theme Preview
+                </a>
+              </div>
+            </div>
           </div>
 
           <!-- Theme Toggle & Mobile Menu -->
@@ -80,6 +115,32 @@ import { ThemeService } from '../../services/theme.service';
               >
                 {{ link.label }}
               </a>
+
+              <!-- Mobile Tools Section -->
+              <div class="pt-2 mt-2 border-t border-gray-200 dark:border-slate-700">
+                <div class="px-4 py-2 text-sm font-semibold text-gray-600 dark:text-gray-400">Tools</div>
+                <a routerLink="/image-picker" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors rounded-lg">
+                  📷 Image Picker
+                </a>
+                <a routerLink="/screen-picker" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors rounded-lg">
+                  🎨 Screen Picker
+                </a>
+                <a routerLink="/converter" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors rounded-lg">
+                  🔄 Color Converter
+                </a>
+                <a routerLink="/contrast-checker" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors rounded-lg">
+                  ♿ Contrast Checker
+                </a>
+                <a routerLink="/palette-generator" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors rounded-lg">
+                  🎨 Palette Generator
+                </a>
+                <a routerLink="/gradient-generator" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors rounded-lg">
+                  🌈 Gradient Generator
+                </a>
+                <a routerLink="/theme-preview" (click)="closeMobileMenu()" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors rounded-lg">
+                  🎭 Theme Preview
+                </a>
+              </div>
             </div>
           </div>
         }
@@ -125,13 +186,9 @@ export class HeaderComponent {
 
   navLinks = [
     { label: 'Home', path: '/' },
-    { label: 'Image Picker', path: '/image-picker' },
-    { label: 'Screen Picker', path: '/screen-picker' },
-    { label: 'Converter', path: '/converter' },
-    { label: 'Contrast Checker', path: '/contrast-checker' },
-    { label: 'Palette Generator', path: '/palette-generator' },
-    { label: 'Gradient Generator', path: '/gradient-generator' },
-    { label: 'Theme Preview', path: '/theme-preview' }
+    { label: 'Learn', path: '/color-theory' },
+    { label: 'Use Cases', path: '/use-cases' },
+    { label: 'FAQ', path: '/faq' }
   ];
 
   toggleTheme(): void {

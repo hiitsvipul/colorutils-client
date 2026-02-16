@@ -14,17 +14,41 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="false"></app-ad-placeholder>
         </div>
       </div>
 
       <div class="container mx-auto px-4">
         <!-- Header Section -->
-        <article class="mb-8">
+        <article class="mb-12">
           <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-3">Screen Color Picker</h1>
-          <p class="text-lg text-gray-600 dark:text-gray-400">
+          <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
             Pick any color from anywhere on your screen - even outside the browser! Simply resize your browser window to see other applications, then use the EyeDropper API to select colors from any application, image, or window.
           </p>
+          
+          <!-- Why Use Section -->
+          <section class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 mb-6 border border-blue-200 dark:border-blue-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Why Use the Screen Color Picker?</h2>
+            <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Capture Exact Colors:</strong> Use the modern EyeDropper API to pick colors with pixel-perfect accuracy from any application or screen element.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Cross-Application Selection:</strong> Pick colors from other windows, desktop applications, and web pages without limitations.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Multiple Format Support:</strong> Get colors in HEX, RGB, HSL, and CMYK formats instantly for any design tool you use.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Privacy-First:</strong> All color picking happens locally on your device - no data is sent to our servers.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Designer's Essential Tool:</strong> Perfect for UI/UX designers, web developers, and graphic designers who need to match colors from existing designs, mockups, or competitor websites.</span></li>
+            </ul>
+          </section>
+
+          <!-- How It Works Section -->
+          <section class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">How to Use the Screen Color Picker</h2>
+            <ol class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">1.</span> <span>Click the "Pick Color from Screen" button to activate the EyeDropper.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">2.</span> <span>A color picker cursor will appear - move it to any color on your screen (inside or outside the browser).</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">3.</span> <span>Click on the color you want to capture - the tool instantly converts it to multiple formats.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">4.</span> <span>Copy any format (HEX, RGB, HSL, CMYK) to your clipboard with a single click.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">5.</span> <span>Paste the color value into your design tool, code editor, or application.</span></li>
+            </ol>
+          </section>
         </article>
 
         <!-- Main Tool Card -->
@@ -163,7 +187,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Bottom -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4">
-          <app-ad-placeholder size="rectangle" [enableAds]="true"></app-ad-placeholder>
+          <app-ad-placeholder size="rectangle" [enableAds]="false"></app-ad-placeholder>
         </div>
       </div>
     </div>

@@ -143,6 +143,173 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
         </div>
       </section>
 
+      <!-- Educational Content Section -->
+      <section class="py-20 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-4">
+          <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">Learn Color Theory & Design Principles</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 text-center mb-4">
+              Master the principles of color design to create more effective and accessible interfaces. Whether you're a web designer, graphic designer, UX professional, or developer, understanding color theory is essential for creating visually appealing and accessible designs.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300 text-center mb-12">
+              Color is one of the most powerful design tools available. It influences user perception, guides attention, conveys meaning, and impacts accessibility. Learn how to choose color palettes that work harmoniously, ensure your designs are accessible to all users including those with color blindness, and understand the psychology behind colors.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-lg p-8 border border-blue-200 dark:border-blue-800">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">🎨 Color Models</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                  Understand RGB, HSL, CMYK, and other color models. Learn how different formats work and when to use each one for optimal results.
+                </p>
+                <a routerLink="/color-theory" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold hover:gap-2 transition-all">
+                  Learn More <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+              </div>
+
+              <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-8 border border-purple-200 dark:border-purple-800">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">♿ Accessibility</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                  Discover WCAG standards and how to create inclusive designs. Learn about color contrast, color blindness, and accessibility best practices.
+                </p>
+                <a routerLink="/color-theory" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold hover:gap-2 transition-all">
+                  Learn More <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+              </div>
+
+              <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg p-8 border border-green-200 dark:border-green-800">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">🎼 Color Harmony</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                  Explore complementary, analogous, triadic, and monochromatic color schemes. Create visually appealing palettes that work together.
+                </p>
+                <a routerLink="/color-theory" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold hover:gap-2 transition-all">
+                  Learn More <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+              </div>
+
+              <div class="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-lg p-8 border border-orange-200 dark:border-orange-800">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">🧠 Color Psychology</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                  Learn how colors evoke emotions and psychological responses. Understand the psychology behind red, blue, green, and other colors.
+                </p>
+                <a routerLink="/color-theory" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold hover:gap-2 transition-all">
+                  Learn More <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="mt-12 p-8 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800 text-center">
+              <p class="text-gray-700 dark:text-gray-300 mb-4">
+                Want to dive deeper into color theory? Explore our comprehensive guide with color wheel explanations, harmony schemes, and practical examples.
+              </p>
+              <a routerLink="/color-theory" class="inline-block px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors">
+                View Complete Guide
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Use Cases Section -->
+      <section class="py-20 bg-gray-50 dark:bg-slate-800">
+        <div class="container mx-auto px-4">
+          <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">Real-World Applications Across Industries</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 text-center mb-4">
+              See how professionals use color tools across different industries and design disciplines.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300 text-center mb-12">
+              Color is integral to professional work across every industry. Web designers use color to create intuitive user interfaces that guide users through digital experiences. Graphic designers use color psychology to create emotionally resonant marketing materials. UX professionals ensure color accessibility so products work for everyone. Brand strategists develop distinctive color systems that create lasting brand recognition. From healthcare to entertainment, finance to fashion, color choices impact user experience, brand perception, and accessibility compliance.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div class="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">🌐 Web & Digital Design</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                  Create beautiful, accessible websites and applications with carefully selected color palettes. Web designers use color to establish visual hierarchy, guide user attention, and improve usability. Proper color contrast ensures accessibility for the 8% of males with color blindness and millions of users with low vision. Our tools help you validate WCAG compliance and experiment with color schemes before implementation.
+                </p>
+              </div>
+
+              <div class="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">🎨 Graphic & Visual Design</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                  Design impactful marketing materials, presentations, and visual content with harmonious color schemes that capture attention. Color psychology plays a crucial role—colors evoke specific emotions and associations that influence how viewers perceive your message. Create professional designs with the right color harmony, whether you need complementary colors for high contrast, analogous colors for subtle harmony, or triadic schemes for vibrant designs.
+                </p>
+              </div>
+
+              <div class="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">🏷️ Brand & Identity Design</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                  Develop distinctive brand color systems that create lasting recognition and differentiate your business in competitive markets. Brand colors become synonymous with companies—think of Apple's minimalist white and black, or Coca-Cola's signature red. Our palette generator and color harmony tools help you develop systematic color schemes that work across applications, from digital to print, and remain consistent across all brand touchpoints.
+                </p>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <a routerLink="/use-cases" class="inline-block px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors">
+                Explore More Use Cases
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Getting Started Section -->
+      <section class="py-20 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">Getting Started with Color Tools</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 text-center mb-12">
+              Whether you're new to color theory or an experienced designer, our comprehensive tools and guides help you master color in your designs.
+            </p>
+
+            <div class="space-y-8">
+              <div class="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-lg p-8 border border-blue-200 dark:border-blue-800">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">📚 Understanding Color Formats</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                  Digital color is expressed in multiple formats, each suited for different purposes. RGB (Red, Green, Blue) is used for screens and digital displays, representing colors as combinations of light. HEX (Hexadecimal) is the web standard for CSS and design tools, using 6-digit codes like #FF5733. HSL (Hue, Saturation, Lightness) offers an intuitive approach where you think in terms of the color itself, its intensity, and brightness. CMYK is used exclusively for print materials. Our Color Converter tool helps you convert between all these formats instantly, and our comprehensive guide explains when to use each format.
+                </p>
+              </div>
+
+              <div class="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-8 border border-purple-200 dark:border-purple-800">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">🎨 Color Harmony & Psychology</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                  Creating visually appealing color combinations requires understanding color harmony schemes. Complementary colors sit opposite each other on the color wheel and create high-contrast, vibrant combinations perfect for call-to-action buttons. Analogous colors sit next to each other and create harmonious, cohesive designs ideal for calm, unified interfaces. Triadic schemes use three colors equally spaced around the wheel for balanced vibrancy. Monochromatic schemes use variations of a single color for sophisticated, professional designs. Beyond harmony, colors carry psychological meanings: blue suggests trust and calmness, red conveys urgency and energy, green represents growth and nature, yellow radiates optimism, and purple symbolizes creativity. Our Palette Generator creates harmonious combinations automatically based on these principles.
+                </p>
+              </div>
+
+              <div class="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg p-8 border border-green-200 dark:border-green-800">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">♿ Accessibility & Contrast</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                  Creating accessible color designs is essential in modern web and application development. The Web Content Accessibility Guidelines (WCAG) define specific contrast ratio requirements: Level AA (minimum standard) requires 4.5:1 for normal text and 3:1 for large text, while Level AAA (enhanced) requires 7:1 and 4.5:1 respectively. These requirements exist because color blindness affects 8% of males, and millions more have low vision. Our Contrast Checker tool immediately tells you if your color combinations meet WCAG standards. You can also use color blindness simulators to see how your designs appear to people with different types of color vision deficiency, ensuring your designs work for everyone regardless of their visual abilities.
+                </p>
+              </div>
+
+              <div class="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-lg p-8 border border-orange-200 dark:border-orange-800">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">🔧 Practical Color Tools & Workflows</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                  Our suite of practical tools integrates seamlessly into your design workflow. The Screen Color Picker lets you capture colors from anywhere on your screen using the browser's EyeDropper API. The Image Color Picker lets you upload images and extract color palettes, useful when you want your design to match existing visuals or artwork. The Gradient Generator creates smooth CSS transitions between colors with real-time preview. The Theme Preview shows how your chosen colors work together on actual UI components like buttons, cards, and forms. All tools work entirely in your browser with no uploads or data collection, ensuring your creative work remains private. Export colors in any format you need: CSS variables for modern projects, JSON for applications, or images for documentation.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-12 p-8 bg-gradient-to-r from-primary-600 to-blue-600 text-white rounded-lg border border-primary-400 text-center">
+              <h3 class="text-2xl font-bold mb-4">Ready to Master Color?</h3>
+              <p class="text-lg mb-6 text-primary-100">
+                Explore our comprehensive color theory guide, learn about accessibility standards, and discover real-world applications across industries. All completely free, no signup required.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a routerLink="/color-theory" class="inline-block px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                  Read Color Theory Guide
+                </a>
+                <a routerLink="/use-cases" class="inline-block px-6 py-3 bg-primary-700 text-white font-semibold rounded-lg hover:bg-primary-800 transition-colors border border-white">
+                  Explore Use Cases
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- CTA Section -->
       <section class="py-16 bg-white dark:bg-slate-900">
         <div class="container mx-auto px-4">

@@ -15,17 +15,65 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="false"></app-ad-placeholder>
         </div>
       </div>
 
       <div class="container mx-auto px-4">
         <!-- Header Section -->
-        <article class="mb-8">
+        <article class="mb-12">
           <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-3">Color Converter</h1>
-          <p class="text-lg text-gray-600 dark:text-gray-400">
-            Convert colors between different formats: HEX, RGB, and HSL. Enter any color value to see all formats.
+          <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+            Convert colors between different formats: HEX, RGB, and HSL. Enter any color value to see all formats. Perfect for converting between design tools and web development workflows.
           </p>
+          
+          <!-- Why Use Section -->
+          <section class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 mb-6 border border-blue-200 dark:border-blue-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Why Use the Color Converter?</h2>
+            <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Instant Format Conversion:</strong> Convert colors between HEX, RGB, HSL, and CMYK formats in milliseconds.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Cross-Tool Compatibility:</strong> Switch between design tools (Figma, Adobe, Sketch) and code editors seamlessly with format conversion.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Developer & Designer Essential:</strong> Web developers need RGB/HEX for CSS, designers need HSL for adjustments, and print designers need CMYK - get all formats instantly.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Error Prevention:</strong> Eliminate manual conversion mistakes that lead to color mismatches between design and development.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Real-Time Validation:</strong> Instant feedback on whether your color value is valid - catch formatting errors immediately.</span></li>
+            </ul>
+          </section>
+
+          <!-- Color Formats Explained Section -->
+          <section class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 mb-6 border border-purple-200 dark:border-purple-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Understanding Color Formats</h2>
+            <div class="space-y-4 text-gray-700 dark:text-gray-300">
+              <div>
+                <h3 class="font-bold text-lg mb-2">HEX (Hexadecimal)</h3>
+                <p>The most common web format. Uses 6 digits representing red, green, and blue (0-255). Example: #FF5733. Perfect for CSS and web design.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">RGB (Red, Green, Blue)</h3>
+                <p>Uses three decimal values (0-255) representing intensity of red, green, and blue light. Example: rgb(255, 87, 51). Native to computer displays.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">HSL (Hue, Saturation, Lightness)</h3>
+                <p>More intuitive for designers. Hue (0-360°), Saturation (0-100%), Lightness (0-100%). Example: hsl(9, 100%, 60%). Best for creating color variations.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">CMYK (Cyan, Magenta, Yellow, Key/Black)</h3>
+                <p>Used in print design. Each value 0-100%. Example: cmyk(0%, 66%, 80%, 0%). Essential for physical printing and commercial materials.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- How It Works Section -->
+          <section class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">How to Use the Color Converter</h2>
+            <ol class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">1.</span> <span>Enter any color value in HEX, RGB, or HSL format into the input field.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">2.</span> <span>The tool automatically converts it to all supported formats instantly.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">3.</span> <span>If the format is invalid, you'll see a clear error message with examples.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">4.</span> <span>Click on any converted color value to copy it to your clipboard.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">5.</span> <span>Use the color preview square to see the actual color represented by all values.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">6.</span> <span>Try our preset colors to quickly convert and learn different color values.</span></li>
+            </ol>
+          </section>
         </article>
 
         <!-- Main Tool Card -->
@@ -186,7 +234,7 @@ import { AdPlaceholderComponent } from '../../shared/ad-placeholder/ad-placehold
       <!-- Ad Placeholder Bottom -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4">
-          <app-ad-placeholder size="rectangle" [enableAds]="true"></app-ad-placeholder>
+          <app-ad-placeholder size="rectangle" [enableAds]="false"></app-ad-placeholder>
         </div>
       </div>
     </div>

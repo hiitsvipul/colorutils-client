@@ -26,17 +26,70 @@ interface ThemeColors {
       <!-- Ad Placeholder Top -->
       <div class="bg-white dark:bg-slate-950">
         <div class="container mx-auto px-4 mb-6">
-          <app-ad-placeholder size="banner" [enableAds]="true"></app-ad-placeholder>
+          <app-ad-placeholder size="banner" [enableAds]="false"></app-ad-placeholder>
         </div>
       </div>
 
       <div class="container mx-auto px-4">
         <!-- Header Section -->
-        <article class="mb-8">
+        <article class="mb-12">
           <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-3">Theme Preview</h1>
-          <p class="text-lg text-gray-600 dark:text-gray-400">
+          <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
             Create and preview custom website themes. See how your color choices look on real UI components before implementing them.
           </p>
+          
+          <!-- Why Use Section -->
+          <section class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 mb-6 border border-blue-200 dark:border-blue-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Why Use a Theme Preview?</h2>
+            <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Visualize Before Implementing:</strong> See exactly how your colors look across all UI elements before writing code.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Test Color Combinations:</strong> Verify contrast, readability, and visual hierarchy on real components.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Fast Design Iterations:</strong> Change colors instantly and see results across your entire UI - save development time.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Consistency Validation:</strong> Ensure brand colors work consistently across buttons, cards, navigation, and other components.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Dark Mode Support:</strong> Preview themes in both light and dark modes to ensure accessibility.</span></li>
+              <li class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-3">✓</span> <span><strong>Stakeholder Approval:</strong> Show clients and team members exactly what the finished design will look like.</span></li>
+            </ul>
+          </section>
+
+          <!-- Theme Components Section -->
+          <section class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 mb-6 border border-purple-200 dark:border-purple-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Theme Color Roles</h2>
+            <div class="space-y-4 text-gray-700 dark:text-gray-300">
+              <div>
+                <h3 class="font-bold text-lg mb-2">Primary Color</h3>
+                <p>The main brand color used for key actions, links, and primary UI elements. This should be your most recognizable color.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Secondary Color</h3>
+                <p>Supporting color for secondary actions and less critical UI elements. Should complement but not compete with primary.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Accent Color</h3>
+                <p>Highlight color for special emphasis, alerts, or important information. Use sparingly for maximum impact.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Background & Surface</h3>
+                <p>Colors for page backgrounds and card/component surfaces. Should have sufficient contrast with text.</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Text Colors</h3>
+                <p>Primary text and secondary text colors. Must meet accessibility contrast ratios for readability.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- How It Works Section -->
+          <section class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">How to Use the Theme Preview</h2>
+            <ol class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">1.</span> <span>Select your primary brand color using the color picker or by entering a color value.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">2.</span> <span>Customize secondary, accent, and background colors to build your complete theme.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">3.</span> <span>See your theme applied to real UI components - buttons, cards, navigation, and more.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">4.</span> <span>Toggle between light and dark modes to ensure your theme works in both.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">5.</span> <span>Make adjustments and iterate until you're happy with the complete design.</span></li>
+              <li class="flex items-start"><span class="text-green-600 dark:text-green-400 font-bold mr-3">6.</span> <span>Export your theme colors in CSS or JSON format for implementation.</span></li>
+            </ol>
+          </section>
         </article>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -554,7 +607,7 @@ interface ThemeColors {
 
             <!-- Ad Placeholder Sidebar (Desktop) -->
             <div class="hidden lg:block">
-              <app-ad-placeholder size="square" [enableAds]="true"></app-ad-placeholder>
+              <app-ad-placeholder size="square" [enableAds]="false"></app-ad-placeholder>
             </div>
           </div>
 
@@ -876,7 +929,7 @@ interface ThemeColors {
       <!-- Ad Placeholder Bottom -->
       <div class="bg-white dark:bg-slate-950 mt-8">
         <div class="container mx-auto px-4">
-          <app-ad-placeholder size="rectangle" [enableAds]="true"></app-ad-placeholder>
+          <app-ad-placeholder size="rectangle" [enableAds]="false"></app-ad-placeholder>
         </div>
       </div>
     </div>
